@@ -1,0 +1,28 @@
+# Maintainer: Jayden Bulexa <JaydenB0@pm.me>
+pkgname=jaydenarch-base
+pkgver=0.0.1
+pkgrel=1
+pkgdesc="Base system configuration for JaydenArch"
+arch=('any')
+url="https://github.com/JaydenB0/JaydenArch"
+license=('MIT')
+
+# Base Groups
+depends=(bash bzip2 coreutils cryptsetup device-mapper dhcpcd diffutils e2fsprogs file filesystem findutils gawk gcc-libs gettext glibc grep gzip inetutils iproute2 iputils jfsutils less licenses linux linux-firmware logrotate lvm2 man-db man-pages mdadm nano netctl pacman pciutils perl procps-ng psmisc reiserfsprogs s-nail sed shadow sysfsutils systemd-sysvcompat tar texinfo usbutils util-linux vi which xfsprogs)
+
+# Base-Devel
+depends+=(autoconf automake binutils bison fakeroot flex gcc groff libtool m4 make patch pkgconf sed sudo systemd texinfo util-linux which)
+
+# Networking
+depends+=(networkmanager openssh)
+
+# Shells
+depends+=(zsh)
+
+# Editor
+depends+=(neovim)
+
+# Multiplexor
+depends+=(tmux)
+
+install="jaydenarch-base.install"
