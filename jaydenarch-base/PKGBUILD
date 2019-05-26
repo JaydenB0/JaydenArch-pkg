@@ -1,11 +1,12 @@
 # Maintainer: Jayden Bulexa <JaydenB0@pm.me>
-pkgname=(jaydenarch-base jaydenarch-dev jaydenarch-mac)
+pkgname=(jaydenarch-base jaydenarch-dev jaydenarch-mac jaydenarch-laptop)
 pkgver=0.0.1
 pkgrel=1
 pkgdesc="Base system configuration for JaydenArch"
 arch=('any')
 url="https://github.com/JaydenB0/JaydenArch"
 license=('MIT')
+groups=(jaydenarch)
 
 package_jaydenarch-base() {
 	# Base Groups
@@ -29,10 +30,9 @@ package_jaydenarch-base() {
 	depends+=(dosfstools)
 	
 	# Fonts
-	depends+=(noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra ttf-monofur ttf-dejavu xorg-fonts-misc)
+	depends+=(noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra ttf-dejavu xorg-fonts-misc)
 	# Printing
 	depends+=(cups)
-
 	install="jaydenarch-base.install"
 }
 
@@ -45,4 +45,24 @@ package_jaydenarch-dev() {
 package_jaydenarch-mac() {
 	depends=(cpupower powertop)
 	install="jaydenarch-mac.install"
+}
+
+package_jaydenarch-laptop(){
+	# WM
+	depends+=(i3-gaps)
+	# Login Greeter
+	depends+=(lightdm-webkit2-greeter)
+	# Browser
+	depends+=(firefox)
+
+	# Xorg (Just install xorg group)
+	depends+=(xorg-server xorg-xinit)	
+	# Audio
+	depends+=(pulseaudio pulseaudio-alsa pulseaudio-bluetooth pavucontrol bluez bluez-utils)
+
+	# Utility
+	depends+=(redshift scrot)
+
+	# Terminal
+	depends+=(terminator)
 }
