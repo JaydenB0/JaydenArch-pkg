@@ -58,11 +58,12 @@ package_jaydenarch-laptop(){
 	# Xorg (Just install xorg group)
 	depends+=(xorg-server xorg-xinit)	
 	# Audio
-	depends+=(pulseaudio pulseaudio-alsa pulseaudio-bluetooth pavucontrol bluez bluez-utils)
+	depends+=(alsa-utils alsa-firmware pulseaudio pulseaudio-alsa pulseaudio-bluetooth pavucontrol bluez bluez-utils)
 
 	# Utility
 	depends+=(redshift scrot)
-
+	
+	# Audio
 	# Terminal
 	depends+=(terminator)
 }
