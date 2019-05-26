@@ -14,7 +14,7 @@ depends=(bash bzip2 coreutils cryptsetup device-mapper dhcpcd diffutils e2fsprog
 depends+=(autoconf automake binutils bison fakeroot flex gcc groff libtool m4 make patch pkgconf sed sudo systemd texinfo util-linux which)
 
 # Networking
-depends+=(networkmanager openssh)
+depends+=(networkmanager openssh netcat)
 
 # Shells
 depends+=(zsh)
