@@ -3,4 +3,6 @@ post_install() {
 }
 post_upgrade(){
 	systemctl enable --now NetworkManager
+	echo "LANG=en_US.UTF-8" > /etc/locale.conf
+	systemctl enable --now org.cups.cupsd
 }
