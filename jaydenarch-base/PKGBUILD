@@ -59,7 +59,7 @@ package_jaydenarch-laptop(){
 	depends+=(alsa-utils alsa-firmware pulseaudio pulseaudio-alsa pulseaudio-bluetooth pavucontrol bluez bluez-utils)
 
 	# Utility
-	depends+=(redshift scrot)
+	depends+=(redshift scrot feh)
 	
 	# Terminal
 	depends+=(terminator)
