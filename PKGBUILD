@@ -40,9 +40,9 @@ package_jaydenarch-dev() {
 	depends+=(autoconf automake binutils bison fakeroot flex gcc groff libtool m4 make patch pkgconf sed sudo systemd texinfo util-linux which)
 }
 
-package_jaydenarch-mac() {
+package_jaydenarch-power() {
 	depends=(cpupower powertop)
-	install="jaydenarch-mac.install"
+	install="jaydenarch-power.install"
 }
 
 package_jaydenarch-laptop(){
