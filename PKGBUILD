@@ -1,6 +1,6 @@
 # Maintainer: Jayden Bulexa <JaydenB0@pm.me>
-pkgname=(jaydenarch-base jaydenarch-dev jaydenarch-mac jaydenarch-laptop)
-pkgver=0.0.1
+pkgname=(jaydenarch-base jaydenarch-dev jaydenarch-power jaydenarch-laptop, jaydenarch-latex)
+pkgver=2019
 pkgrel=1
 pkgdesc="Base system configuration for JaydenArch"
 arch=('any')
@@ -43,6 +43,12 @@ package_jaydenarch-dev() {
 package_jaydenarch-power() {
 	depends=(cpupower powertop)
 	install="jaydenarch-power.install"
+}
+
+package_jaydenarch-latex() {
+	depends=('texlive-bin' 'texlive-htmlxml' $(pacman -Sgq texlive-most texlive-lang))
+	install -d "$pkgdir"/opt
+	cp -R ${srcdir}/install-tl-[0-9]*/ "$pkgdir"/opt/texlive-installer
 }
 
 package_jaydenarch-laptop(){
