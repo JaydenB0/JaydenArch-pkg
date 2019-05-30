@@ -46,9 +46,7 @@ package_jaydenarch-power() {
 }
 
 package_jaydenarch-latex() {
-	depends=('texlive-bin' 'texlive-htmlxml' $(pacman -Sgq texlive-most texlive-lang))
-	install -d "$pkgdir"/opt
-	cp -R ${srcdir}/install-tl-[0-9]*/ "$pkgdir"/opt/texlive-installer
+	depends=('texlive-bin' 'texlive-htmlxml' $(pacman -Sgq texlive-most))
 }
 
 package_jaydenarch-laptop(){
