@@ -62,5 +62,5 @@ package_jaydenarch-laptop(){
 	depends+=(redshift scrot feh)
 	
 	# Terminal
-	depends+=(terminator)
+	depends+=(terminator compton)
 }
